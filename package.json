@@ -3,9 +3,35 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "ramda": "^0.27.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.2",
+    "@types/lodash": "^4.14.149",
+    "@types/moment": "^2.13.0",
+    "@types/ramda": "^0.26.41",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-jest": "^23.7.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "jest-extended": "^0.11.5",
+    "prettier": "^1.19.1",
+    "xo": "0.21.1"
+  },
+  "scripts": {
+    "test": "jest",
+    "update-index": "node ./lib/index/index-generator.js",
+    "test-watch": "jest -o --watch"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "jest-extended"
+    ]
+  },
   "license": "ISC"
 }
